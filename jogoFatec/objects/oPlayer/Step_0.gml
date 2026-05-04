@@ -1,41 +1,47 @@
-// Movimentação e colisão
-// Cima
+// Empurra o player para fora da parede caso esteja dentro dela -- correção do erro de paralisar na parede
+while (place_meeting(x, y, oCollision)) {
+    // descobre de qual lado veio e empurra 1px pra fora
+    if (!place_meeting(x, y - 1, oCollision)) { y -= 1; break; }
+    if (!place_meeting(x, y + 1, oCollision)) { y += 1; break; }
+    if (!place_meeting(x - 1, y, oCollision)) { x -= 1; break; }
+    if (!place_meeting(x + 1, y, oCollision)) { x += 1; break; }
+    break;
+}
 
-if (keyboard_check(vk_up) or keyboard_check(ord("W"))) {
-    if (!place_meeting(x, y - spd, oCollision)) {
-        y -= spd;
+// ----Movimentação
+var _input_x = 0;
+var _input_y = 0;
+
+if (keyboard_check(vk_right) or keyboard_check(ord("D"))) { _input_x = spd; }
+if (keyboard_check(vk_left)  or keyboard_check(ord("A"))) { _input_x = -spd; }
+if (keyboard_check(vk_down)  or keyboard_check(ord("S"))) { _input_y = spd; }
+if (keyboard_check(vk_up)    or keyboard_check(ord("W"))) { _input_y = -spd; }
+
+// Eixo X
+if (_input_x != 0) {
+    if (!place_meeting(x + _input_x, y, oCollision)) {
+        x += _input_x;
+    } else {
+        while (!place_meeting(x + sign(_input_x), y, oCollision)) {
+            x += sign(_input_x);
+        }
+    }
+    image_xscale = sign(_input_x);
+}
+
+// Eixo Y
+if (_input_y != 0) {
+    if (!place_meeting(x, y + _input_y, oCollision)) {
+        y += _input_y;
+    } else {
+        while (!place_meeting(x, y + sign(_input_y), oCollision)) {
+            y += sign(_input_y);
+        }
     }
 }
 
-// Baixo
-if (keyboard_check(vk_down) or keyboard_check(ord("S"))) {
-    if (!place_meeting(x, y + spd, oCollision)) {
-        y += spd;
-    }
-}
-
-// Esquerda
-if (keyboard_check(vk_left) or keyboard_check(ord("A"))) {
-    if (!place_meeting(x - spd, y, oCollision)) {
-        x -= spd;
-    }
-    image_xscale = -1;
-}
-
-// Direita
-if (keyboard_check(vk_right) or keyboard_check(ord("D"))) {
-    if (!place_meeting(x + spd, y, oCollision)) {
-        x += spd;
-    }
-    image_xscale = 1;
-}
-
-var _movendo = keyboard_check(vk_up) or keyboard_check(vk_down) or 
-               keyboard_check(vk_left) or keyboard_check(vk_right) or
-               keyboard_check(ord("W")) or keyboard_check(ord("A")) or 
-               keyboard_check(ord("S")) or keyboard_check(ord("D"));
-
-if (_movendo) {
+// Animação de andar
+if (_input_x != 0 or _input_y != 0) {
     sprite_index = sPlayerWalk;
 } else {
     sprite_index = sPlayer;

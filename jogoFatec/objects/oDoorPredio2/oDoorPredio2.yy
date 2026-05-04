@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oDoorSistemasEmb",
+  "%Name":"oDoorPredio2",
   "eventList":[],
   "managed":true,
-  "name":"oDoorSistemasEmb",
+  "name":"oDoorPredio2",
   "overriddenProperties":[],
   "parent":{
     "name":"_buildings",

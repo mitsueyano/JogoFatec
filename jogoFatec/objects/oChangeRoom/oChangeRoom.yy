@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oCollision",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oChangeRoom",
+  "eventList":[],
   "managed":true,
-  "name":"oCollision",
+  "name":"oChangeRoom",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Collision",
-    "path":"sprites/Collision/Collision.yy",
+    "name":"bgChangeRoom",
+    "path":"sprites/bgChangeRoom/bgChangeRoom.yy",
   },
   "spriteMaskId":null,
   "visible":true,
