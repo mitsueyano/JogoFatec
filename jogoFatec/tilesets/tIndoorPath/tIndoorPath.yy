@@ -1,14 +1,14 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"tBrickPath",
+  "%Name":"tIndoorPath",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"tBrickPath",
-  "out_columns":2,
+  "name":"tIndoorPath",
+  "out_columns":4,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"bgBrickPath",
-    "path":"sprites/bgBrickPath/bgBrickPath.yy",
+    "name":"bgIndoorPath",
+    "path":"sprites/bgIndoorPath/bgIndoorPath.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -34,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":4,
+  "tile_count":16,
 }
