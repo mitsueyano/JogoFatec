@@ -7,8 +7,8 @@ switch global.lastRoom{
 		oPlayer.y = oPredio1.y + 50;
 		break;
 	case "Predio2":
-		oPlayer.x = oPredio2.x;
-		oPlayer.y = oPredio2.y + 50;
+		oPlayer.x = oPredio2.x + 50;
+		oPlayer.y = oPredio2.y;
 		break;
 	default: break;
 }
