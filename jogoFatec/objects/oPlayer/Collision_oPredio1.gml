@@ -1,2 +1,2 @@
 global.lastRoom = "Predio1";
-room_goto(RoomADS);
+room_goto(Predio1);
