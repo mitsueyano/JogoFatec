@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"bgIndoorPath",
   "bboxMode":0,
-  "bbox_bottom":15,
+  "bbox_bottom":31,
   "bbox_left":0,
   "bbox_right":63,
   "bbox_top":0,

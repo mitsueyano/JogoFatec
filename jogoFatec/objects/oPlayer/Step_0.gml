@@ -1,3 +1,12 @@
+// Perto de NPCS
+if distance_to_object(oParNPC) <= 10{
+	if (keyboard_check_pressed(ord("E")) and global.dialogo == false){
+		var _npc = instance_nearest(x, y, oParNPC)
+		var _dialogo = instance_create_layer(x, y, "Dialogo", oDialogo)
+		_dialogo.npc_nome = _npc.nome
+	}
+}
+
 // Empurra o player para fora da parede caso esteja dentro dela -- correção do erro de paralisar na parede
 while (place_meeting(x, y, oCollision)) {
     // descobre de qual lado veio e empurra 1px pra fora
