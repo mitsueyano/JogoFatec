@@ -1,8 +1,13 @@
+textos_grid = ds_grid_create(2, 0);
+enum Infos{
+	Quem,
+	Texto,
+	Nome
+}
+
 npc_nome = "";
-texto[0] = "";
 pagina = 0;
+inicializar = false;
+caractere = 0;
 
-incializar = false
-
-caractere = 0
-alarm[0] = 1
+alarm[0] = 1;

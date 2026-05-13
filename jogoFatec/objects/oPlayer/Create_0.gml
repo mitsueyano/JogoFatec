@@ -12,4 +12,5 @@ col = spd + 2
 //------------------------------- variáveis
 global.lastRoom = "";
 global.dialogo = false
+global.InteracaoSecretaria = false
 	
