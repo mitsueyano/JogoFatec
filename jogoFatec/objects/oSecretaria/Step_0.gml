@@ -1,18 +1,22 @@
 if (global.InteracaoSecretaria == true) {
+    global.cutscene = true;
     if (global.dialogo == false) {
-        
-        var _distancia = point_distance(x, y, 490, 124); // Onde o NPC vai
+        var _xNPC = 490;
+        var _yNPC = 124;
         var _vel = 0.5;
-
-        if (_distancia > _vel) {
-            mp_linear_step(490, 124, _vel, false);
-            
-            sprite_index = sSecretariaWalk;           
-            if (490 > x) image_xscale = 1; else image_xscale = -1; // Direção do sprite
-        } else { // Quando chega nas coordenadas
-            instance_destroy()
+        if (point_distance(x, y, _xNPC, _yNPC) > _vel) {
+            mp_linear_step(_xNPC, _yNPC, _vel, false);
+            sprite_index = sSecretariaWalk;
+            image_xscale = (_xNPC > x) ? 1 : -1;
+        } else {
+			// Timer
+			var _ts = time_source_create(time_source_game, 2, time_source_units_seconds, function() {
+			    falas_solo("pensamento_pos_secretaria"); // Oq faz depois de 2seg
+			});
+    
+			time_source_start(_ts);
+            oPlayer.cutscene_fase = 1;
+            instance_destroy();
         }
-    } else {
-        speed = 0;
     }
 }
