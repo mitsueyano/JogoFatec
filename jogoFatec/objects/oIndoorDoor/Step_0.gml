@@ -3,7 +3,7 @@ var perto = place_meeting(x, y, oPlayer);
 // Interação "E"
 if (perto && keyboard_check_pressed(ord("E")))
 {
-	falas_solo("porta_trancada");
+	dialogo("porta_trancada");
     /*
 	global.lastRoom = "ADS";
     room_goto(RoomADS);

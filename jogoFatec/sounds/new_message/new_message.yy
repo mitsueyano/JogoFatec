@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.5934694,
+  "duration":2.31,
   "exportDir":"",
   "name":"new_message",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"new_message.mp3",
-  "volume":1.0,
+  "volume":0.31,
 }

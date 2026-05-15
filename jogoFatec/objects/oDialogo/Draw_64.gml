@@ -1,3 +1,4 @@
+depth = -9999
 var _guil = display_get_gui_width();
 var _guia = display_get_gui_height();
 

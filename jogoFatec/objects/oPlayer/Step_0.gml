@@ -9,57 +9,11 @@ if (distance_to_object(oParNPC) <= 30) {
 
 global.dialogo = instance_exists(oDialogo);
 
-// Cutscene inicial
+// Chama a cutscene
 if (global.cutscene == true) {
-
-    if (cutscene_fase == 0) {
-        // Aguarda a secretaria sumir antes de fazer qualquer coisa
-        sprite_index = sPlayer;
-        exit;
-    }
-    
-    if (cutscene_fase == 1) {
-        sprite_index = sPlayer;
-        if (global.dialogo == true) {
-            cutscene_dialogo_iniciado = true;
-        }
-        if (cutscene_dialogo_iniciado == true && global.dialogo == false) {
-            cutscene_fase = 2;
-            cutscene_dialogo_iniciado = false;
-        }
-        exit;
-    }
-    
-    if (cutscene_fase == 2) {
-        if (global.dialogo == false) {
-            var _targetX = 306;
-            var _targetY = 79;
-            var _vel = 0.5;
-            if (point_distance(x, y, _targetX, _targetY) > _vel) {
-                mp_linear_step(_targetX, _targetY, _vel, false);
-                sprite_index = sPlayerWalk;
-                image_xscale = (_targetX > x) ? 1 : -1;
-                exit;
-            } else {
-                x = _targetX;
-                y = _targetY;
-                sprite_index = sPlayer;
-				
-			    var _ts = time_source_create(time_source_game, 1, time_source_units_seconds, function() {
-					falas_solo("connWifi"); // Oq faz depois do Timer			
-				    global.cutscene = false;
-
-			    });
-			    time_source_start(_ts);
-				cutscene_fase = 0;	
-              
-            }
-        } else {
-            sprite_index = sPlayer;
-            exit;
-        }
-    }
+   scr_cutscenes(global.cutscene_fase)
 }
+
 
 // Colisão - Empurra 1 px pro lado - Correção de ficar paralisado na parede
 if (place_meeting(x, y, oCollision)) {
@@ -93,5 +47,7 @@ if (!global.dialogo && !global.cutscene) {
         sprite_index = sPlayer;
     }
 } else {
-    sprite_index = sPlayer;
+	if (!global.cutscene){
+	    sprite_index = sPlayer;
+	}
 }

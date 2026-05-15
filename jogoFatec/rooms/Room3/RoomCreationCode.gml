@@ -6,6 +6,5 @@ switch global.lastRoom{
 		oPlayer.x = oPredio3.x + 50;
 		oPlayer.y = oPredio3.y;
 		break;
-	default:
-		break;
+	default: break;
 }

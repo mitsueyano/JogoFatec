@@ -7,9 +7,6 @@ depth = -100
 
 //------------------------------- variáveis
 
-// Configuração cutscene
-cutscene_fase = 0;
-cutscene_dialogo_iniciado = false;
 
 // velocidade do personagem
 spd = 2 
@@ -20,4 +17,11 @@ col = spd + 2
 global.lastRoom = "";
 global.dialogo = false
 global.InteracaoSecretaria = false
+
+
 global.cutscene = false;
+global.cutscene_fase = "";
+global.cutscene_subfase = "";
+global.cutscene_rodou = false;
+
+global.msg = 1

@@ -9,13 +9,8 @@ if (global.InteracaoSecretaria == true) {
             sprite_index = sSecretariaWalk;
             image_xscale = (_xNPC > x) ? 1 : -1;
         } else {
-			// Timer
-			var _ts = time_source_create(time_source_game, 2, time_source_units_seconds, function() {
-			    falas_solo("pensamento_pos_secretaria"); // Oq faz depois de 2seg
-			});
-    
-			time_source_start(_ts);
-            oPlayer.cutscene_fase = 1;
+            global.cutscene_fase = "Secretaria";
+			global.cutscene_subfase = "inicio";
             instance_destroy();
         }
     }

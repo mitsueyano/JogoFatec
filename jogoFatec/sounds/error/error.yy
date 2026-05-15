@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"connect",
+  "%Name":"error",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.0971428,
+  "duration":1.8808163,
   "exportDir":"",
-  "name":"connect",
+  "name":"error",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"connect.mp3",
+  "soundFile":"error.mp3",
   "volume":0.31,
 }
