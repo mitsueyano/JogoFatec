@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"cutscene_secretaria",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"cutscenes",
+    "path":"folders/Scripts/cutscenes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

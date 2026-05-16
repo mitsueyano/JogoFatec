@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"_doors",
-    "path":"folders/Sprites/_objects/_doors.yy",
+    "name":"Exterior",
+    "path":"folders/Sprites/Exterior.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

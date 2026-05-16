@@ -6,8 +6,8 @@
   "name":"oPredio1",
   "overriddenProperties":[],
   "parent":{
-    "name":"_buildings",
-    "path":"folders/Objects/_buildings.yy",
+    "name":"doors",
+    "path":"folders/Objects/_buildings/doors.yy",
   },
   "parentObjectId":null,
   "persistent":false,

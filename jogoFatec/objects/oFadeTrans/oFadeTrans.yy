@@ -9,8 +9,8 @@
   "name":"oFadeTrans",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"_things",
+    "path":"folders/Objects/_things.yy",
   },
   "parentObjectId":null,
   "persistent":false,

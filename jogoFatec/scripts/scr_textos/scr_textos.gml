@@ -26,7 +26,7 @@ function scr_textos(){
 		case "notificacao1":
 		    ds_grid_add_text(textos_grid, "Nossa, quantas notificações.", "Player");
 			ds_grid_add_text(textos_grid, "Instagram... Mãe... Linkedin...", "Player");
-			ds_grid_add_text(textos_grid, "Perai, O que é isso?", "Player");
+			ds_grid_add_text(textos_grid, "Perai, que número é esse?", "Player");
 		break;
 		
 		case "notificacao2":

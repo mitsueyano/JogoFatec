@@ -41,8 +41,8 @@
   ],
   "name":"RoomADS",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Interior",
+    "path":"folders/Rooms/Interior.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

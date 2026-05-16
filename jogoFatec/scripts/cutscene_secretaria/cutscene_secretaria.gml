@@ -15,13 +15,13 @@ function cutscene_secretaria(){
                         var _vel = 0.5;
                         if (point_distance(oPlayer.x, oPlayer.y, _targetX, _targetY) > _vel) {
                             mp_linear_step(_targetX, _targetY, _vel, false);
-                            oPlayer.sprite_index = sPlayerWalk;
+                            oPlayer.sprite_index = Sprite53;
 							oPlayer.image_speed = 1;
                             oPlayer.image_xscale = (_targetX > oPlayer.x) ? 1 : -1;
                         } else {
                             oPlayer.x = _targetX;
                             oPlayer.y = _targetY;
-							oPlayer.sprite_index = sPlayer;
+							oPlayer.sprite_index = sPlayerIdle;
 							if (!global.cutscene_rodou){
 								oPlayer.alarm[1] = room_speed * 1;
 								global.cutscene_rodou = true;

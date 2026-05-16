@@ -6,8 +6,8 @@
   "name":"oWifi",
   "overriddenProperties":[],
   "parent":{
-    "name":"_objects",
-    "path":"folders/Objects/_objects.yy",
+    "name":"furniture",
+    "path":"folders/Objects/_buildings/furniture.yy",
   },
   "parentObjectId":null,
   "persistent":false,
