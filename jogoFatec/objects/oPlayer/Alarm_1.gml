@@ -6,7 +6,7 @@ switch (global.cutscene_fase){
 	//enquanto lê a senha do wifi
 	case "Secretaria": 
 		dialogo("connWifi");
-		global.cutscene_subfase = "esperando_wifi";
+		global.cutscene_subfase = "connWifi";
 		global.cutscene_rodou = false;
 	break
 	
@@ -22,7 +22,7 @@ switch (global.cutscene_fase){
 			
 			case "pos_notificacao":
 				dialogo("notificacao1");
-				global.cutscene_subfase = "fade_celular";
+				global.cutscene_subfase = "fade_in_celular";
 				global.cutscene_rodou = false;
 			break;
 		}

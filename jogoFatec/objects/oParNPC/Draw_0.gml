@@ -1,5 +1,5 @@
 draw_self();
-
+depth = -5;
 // Checa a distância do player
 if (distance_to_object(oPlayer) <= 30) {
     if (global.dialogo == false) {

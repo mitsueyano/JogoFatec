@@ -1,0 +1,72 @@
+{
+
+  "FirstNPC": [
+    { "texto": "Oiê, você é um dos novos calouros aqui da integração né? Seja bem vindo!", 
+    "emissor": "FirstNPC" },
+
+    { "texto": "Sinta-se à vontade para entrar na secretaria kk", 
+    "emissor": "FirstNPC" },
+
+    { "texto": "Não sei mais oq dizer", 
+    "emissor": "FirstNPC" },
+
+    { "texto": "Pibbles são legais", 
+    "emissor": "Player" }
+  ],
+
+
+
+
+
+  "porta_trancada": [
+    { "texto": "A porta está trancada...", 
+    "emissor": "Player" }
+  ],
+
+
+
+
+
+  "Secretaria": [
+    { "texto": "Olá, eu precisava de um Gmail", 
+    "emissor": "Player" },
+
+    { "texto": "Tabom vou lá buscar", 
+    "emissor": "Secretária" }
+  ],
+  
+  "pensamento_pos_secretaria": [
+    { "texto": "...", "emissor": "Player" }
+  ],
+  "connWifi": [
+    { "texto": "Olha, a senha do wifi", 
+    "emissor": "Player" },
+    { "texto": "Conectando...", "emissor": "Player" }
+  ],
+
+
+  "notificacao1": [
+    { "texto": "Nossa, quantas notificações.", 
+    "emissor": "Player" },
+    { "texto": "Instagram... Mãe... Linkedin...", 
+    "emissor": "Player" },
+    { "texto": "Perai, que número é esse?", 
+    "emissor": "Player" }
+  ],
+  "screen_error": [
+    { "texto": "Que estranho, acho melhor falar com algúem.", 
+    "emissor": "Player" }
+  ],
+
+
+  "campus_vazio_reacao": [
+    { "texto": "Ué, cadê todo mundo?", 
+    "emissor": "Player" }
+  ],
+
+
+  "cesar": [
+    { "texto": "Você veio correndo... Desculpa o truque, mas se eu mandasse um 'Oi, virei uma inteligência artificial e preciso de ajuda', você acharia que era trote e bloquearia o número.", 
+    "emissor": "???" }
+  ]
+}

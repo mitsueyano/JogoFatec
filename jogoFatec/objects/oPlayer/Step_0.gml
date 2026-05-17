@@ -9,7 +9,7 @@ if (distance_to_object(oParNPC) <= 30) {
 
 global.dialogo = instance_exists(oDialogo);
 
-// Chama a cutscene
+// Chama as cutscenes dependendo da fase que está
 if (global.cutscene == true) {
    scr_cutscenes(global.cutscene_fase)
 }
@@ -32,47 +32,45 @@ if (!global.dialogo && !global.cutscene) {
     var _input_y = (keyboard_check(vk_down) || keyboard_check(ord("S"))) - (keyboard_check(vk_up) || keyboard_check(ord("W")));
     
     if (_input_x != 0 || _input_y != 0) {
-        //Horizontal
-        if (!place_meeting(x + _input_x * spd, y, oCollision)) {
-            x += _input_x * spd;
+        
+        // Normaliza a velocidade para a diagonal
+        var _dir = point_direction(0, 0, _input_x, _input_y);
+        var _hspd = lengthdir_x(spd, _dir);
+        var _vspd = lengthdir_y(spd, _dir);
+        
+        // Horizontal
+        if (!place_meeting(x + _hspd, y, oCollision)) {
+            x += _hspd;
         } else {
-            while (!place_meeting(x + sign(_input_x), y, oCollision)) x += sign(_input_x);
+            while (!place_meeting(x + sign(_hspd), y, oCollision)) x += sign(_hspd);
         }
         
-        //Vertical
-        if (!place_meeting(x, y + _input_y * spd, oCollision)) {
-            y += _input_y * spd;
+        // Vertical
+        if (!place_meeting(x, y + _vspd, oCollision)) {
+            y += _vspd;
         } else {
-            while (!place_meeting(x, y + sign(_input_y), oCollision)) y += sign(_input_y);
+            while (!place_meeting(x, y + sign(_vspd), oCollision)) y += sign(_vspd);
         }
         
-        if (_input_x != 0 && _input_y != 0) {
-            //Diagonal
-            if (_input_y > 0) {
-                sprite_index = sPlayerDiagonalFront; // Diagonal para Baixo
-            } else {
-                sprite_index = Sprite53;  // Diagonal para Cima
-            }
-        } else {
-            if (_input_y > 0) {
-                sprite_index = sPlayerFront; //Baixo
-            } else if (_input_y < 0) {
-                sprite_index = sPlayerBack;  //Cima
-            } else if (_input_x != 0) {
-                sprite_index = sPlayerSide;  //Lados
-            }
+        // Definição dos Sprites
+        if (_input_y > 0) {
+            sprite_index = sPlayer_front; // Baixo
+        } else if (_input_y < 0) {
+            sprite_index = sPlayer_back;  // Cima
+        } else if (_input_x != 0) {
+            sprite_index = sPlayer_side;  // Lados
         }
         
-        //Inversão de lados
+        // Inversão de lados
         if (_input_x != 0) {
             image_xscale = sign(_input_x);
         }
         
     } else {
-        sprite_index = sPlayerIdle;
+        sprite_index = sPlayer_idle;
     }
 } else {
     if (!global.cutscene){
-        sprite_index = sPlayerIdle;
+        sprite_index = sPlayer_idle;
     }
 }

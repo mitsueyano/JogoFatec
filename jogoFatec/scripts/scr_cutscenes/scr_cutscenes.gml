@@ -8,6 +8,10 @@ function scr_cutscenes(cutscene_fase) {
 		case "Celular":
 			cutscene_celular();     
         break;
+    
+        case "Cesar":
+			cutscene_cesar();     
+        break;
 		
 		default: break;
     }
